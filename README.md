@@ -7,7 +7,7 @@
 **A lightning-fast, local-first infinite whiteboard.**
 No login. No signup. No cloud. Works offline. Open → draw → share in under a second.
 
-<!-- LIVE_DEMO -->
+### ▶ [**Try it live**](https://whiteboard-zeta-two.vercel.app)
 
 [![Next.js](https://img.shields.io/badge/Next.js-14-000?logo=nextdotjs&logoColor=white)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
@@ -15,7 +15,7 @@ No login. No signup. No cloud. Works offline. Open → draw → share in under a
 [![PWA](https://img.shields.io/badge/PWA-offline-5B6CFF)](#-local-first--offline)
 [![License: MIT](https://img.shields.io/badge/License-MIT-111)](#license)
 
-[**Live demo**](#-live-demo) · [**Spec**](./SPEC.md) · [**Features**](#-features) · [**Shortcuts**](#-keyboard-shortcuts)
+[**Live demo**](https://whiteboard-zeta-two.vercel.app) · [**Spec**](./SPEC.md) · [**Features**](#-features) · [**Shortcuts**](#-keyboard-shortcuts)
 
 </div>
 
@@ -23,8 +23,7 @@ No login. No signup. No cloud. Works offline. Open → draw → share in under a
 
 ## ✨ Live demo
 
-<!-- LIVE_URL -->
-_Deploying…_
+**→ [whiteboard-zeta-two.vercel.app](https://whiteboard-zeta-two.vercel.app)**
 
 > Everything runs in your browser. Your boards never leave your device — they live in IndexedDB, not on a server.
 
