@@ -1,0 +1,17 @@
+{
+  "name": "Slate — Local-first Whiteboard",
+  "short_name": "Slate",
+  "description": "A lightning-fast, local-first infinite whiteboard. No login, no cloud, works offline.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fbfbfa",
+  "theme_color": "#fbfbfa",
+  "categories": ["productivity", "utilities", "graphics"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

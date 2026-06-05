@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #fbfbfa;
+  --ink-rgb: 17 17 17;
+}
+.dark {
+  --bg: #0f0f10;
+  --ink-rgb: 245 245 245;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  height: 100%;
+  overscroll-behavior: none;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: rgb(var(--ink-rgb));
+  font-family: 'Inter', 'Geist', -apple-system, BlinkMacSystemFont, 'SF Pro Text',
+    'Segoe UI', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* prevent the whole page from scrolling/bouncing in the editor */
+.no-scroll {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+@layer components {
+  .panel {
+    @apply rounded-2xl border border-black/[0.06] bg-white/90 shadow-float backdrop-blur-xl
+      dark:border-white/10 dark:bg-[#1c1c1f]/90;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-3 py-2 text-sm font-medium
+      text-ink/80 transition-colors hover:bg-black/[0.05] active:bg-black/[0.08]
+      dark:hover:bg-white/[0.06] dark:active:bg-white/[0.10]
+      disabled:cursor-not-allowed disabled:opacity-40;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-3.5 py-2 text-sm
+      font-medium text-white shadow-soft transition-all hover:brightness-105 active:brightness-95;
+  }
+  .tool-btn {
+    @apply relative grid h-9 w-9 place-items-center rounded-xl text-ink/70 transition-all
+      hover:bg-black/[0.05] dark:hover:bg-white/[0.06] active:scale-95;
+  }
+  .tool-btn[data-active='true'] {
+    @apply bg-accent text-white shadow-soft hover:bg-accent dark:hover:bg-accent;
+  }
+  .menu-item {
+    @apply flex w-full items-center gap-3 rounded-lg px-2.5 py-2 text-sm text-ink/80
+      transition-colors hover:bg-black/[0.05] dark:hover:bg-white/[0.06];
+  }
+  .swatch {
+    @apply h-6 w-6 rounded-lg border border-black/10 transition-transform hover:scale-110
+      dark:border-white/15;
+  }
+  .swatch[data-active='true'] {
+    @apply ring-2 ring-accent ring-offset-2 ring-offset-white dark:ring-offset-[#1c1c1f];
+  }
+  .kbd {
+    @apply inline-flex h-5 min-w-[20px] items-center justify-center rounded-md border border-black/10
+      bg-black/[0.03] px-1.5 font-mono text-[11px] text-ink/50
+      dark:border-white/15 dark:bg-white/[0.06] dark:text-ink/50;
+  }
+}
+
+/* slim, calm scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(17, 17, 17, 0.15);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(17, 17, 17, 0.28);
+  background-clip: content-box;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(245, 245, 245, 0.18);
+  background-clip: content-box;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 245, 245, 0.3);
+  background-clip: content-box;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
